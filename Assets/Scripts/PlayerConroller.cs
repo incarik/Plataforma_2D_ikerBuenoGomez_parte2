@@ -45,22 +45,25 @@ public class PlayerConroller : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        characterRigidbody.velocity = new Vector2(horizontalInput  * characterSpeed, characterRigidbody.velocity.y);
+        if(isAttacking)
+        {
+            if(horizontalInput == 0)
+            {
+                characterRigidbody.velocity = new Vector2(0, characterRigidbody.velocity.y);
+            }
+        }
+        else 
+        {
+            characterRigidbody.velocity = new Vector2(horizontalInput  * characterSpeed, characterRigidbody.velocity.y);
+        }
+        
     }
 
 
     void Moviment()
     {
-
-        if( isAttacking)
-        {
-            horizontalInput = 0;
-        }
-        
-        else
-        {
-            horizontalInput = Input.GetAxis("Horizontal"); 
-        }
+    
+     horizontalInput = Input.GetAxis("Horizontal");
         
 
        if(horizontalInput < 0)
