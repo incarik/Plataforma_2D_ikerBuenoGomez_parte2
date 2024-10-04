@@ -749,8 +749,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.123800516}
-  m_Size: {x: 0.5, y: 0.93796563}
+  m_Offset: {x: 0, y: 0.057534873}
+  m_Size: {x: 0.5, y: 0.80543435}
   m_Direction: 0
 --- !u!212 &289362354
 SpriteRenderer:
@@ -1371,6 +1371,7 @@ GameObject:
   - component: {fileID: 533947029}
   - component: {fileID: 533947032}
   - component: {fileID: 533947033}
+  - component: {fileID: 533947034}
   m_Layer: 8
   m_Name: Mimic
   m_TagString: Mimico
@@ -1410,7 +1411,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00437662, y: -0.07746717}
+  m_Offset: {x: -0.00437662, y: -0.03322345}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1421,7 +1422,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7986737, y: 0.552414}
+  m_Size: {x: 0.7986737, y: 0.46392667}
   m_EdgeRadius: 0
 --- !u!212 &533947030
 SpriteRenderer:
@@ -1463,7 +1464,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7fd1f0c20e6dbb948bb50d7e09b48ad1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1484,7 +1485,7 @@ Transform:
   m_GameObject: {fileID: 533947028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.85, y: -1.6, z: 0}
+  m_LocalPosition: {x: -0.85, y: -1.813, z: 0}
   m_LocalScale: {x: 0.7375, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1538,6 +1539,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &533947034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533947028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84510efea73dd904982afacb6c73337a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 3
 --- !u!1 &549305365
 GameObject:
   m_ObjectHideFlags: 0
