@@ -101,7 +101,7 @@ public class PlayerConroller : MonoBehaviour
     {
         isAttacking = true;
 
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.15f);
 
         Collider2D[] collider = Physics2D.OverlapCircleAll(attackHitBox.position, attackRadius); 
         foreach(Collider2D enemy in collider)
@@ -111,10 +111,12 @@ public class PlayerConroller : MonoBehaviour
                 //Destroy(enemy.gameObject);
                 Rigidbody2D enemyRigidbody = enemy.GetComponent<Rigidbody2D>();
                 enemyRigidbody.AddForce(transform.right + transform.up * 2, ForceMode2D.Impulse);
+                Enemy enemyScript = enemy.GetComponent<Enemy>();
+                enemyScript.TakeDamage();
             }
         }
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.16f);
 
         isAttacking = false;
     }

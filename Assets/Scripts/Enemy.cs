@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField] private int healthPoints = 3;
-    
+ 
     void Start()
     {
         
@@ -15,4 +15,18 @@ public class enemy : MonoBehaviour
     {
         
     }
+
+     public void TakeDamage()
+        {
+            healthPoints--;
+                
+            if(healthPoints <= 0)
+            {
+                Die();
+            }
+        }
+    void Die()
+        {
+             Destroy(gameObject, 1f);
+        }
 }
