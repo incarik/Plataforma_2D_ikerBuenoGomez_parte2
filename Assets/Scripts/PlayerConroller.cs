@@ -51,17 +51,37 @@ public class PlayerConroller : MonoBehaviour
 
     void Moviment()
     {
-        horizontalInput = Input.GetAxis("Horizontal"); 
+
+        if( isAttacking)
+        {
+            horizontalInput = 0;
+        }
+        
+        else
+        {
+            horizontalInput = Input.GetAxis("Horizontal"); 
+        }
+        
 
        if(horizontalInput < 0)
        {
+
+        if(!isAttacking)
+        {
             transform.rotation = Quaternion.Euler(0, 180, 0); //sirve para girar al personaje de una manera compleja
+        }
+            
             characterAnimator.SetBool("IsRunning", true);
        }
 
        else if(horizontalInput > 0)
        {
-        transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        if(!isAttacking)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        
         characterAnimator.SetBool("IsRunning", true);
        }
 
